@@ -4,7 +4,7 @@ import (
     "log"
 
    // "github.com/tutorials/go/crud/pkg/models"
-   "github.com/ThotPrime/Project/tree/main/Project/pkg/models" 
+   "github.com/ThotPrime/Project/tree/master/Project/pkg/models" 
    "gorm.io/driver/postgres"
     "gorm.io/gorm"
 )

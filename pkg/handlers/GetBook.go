@@ -8,7 +8,7 @@ import (
 
 	"github.com/gorilla/mux"
 	//"github.com/tutorials/go/crud/pkg/mocks"
-	"github.com/ThotPrime/Project/tree/main/Project/pkg/models"
+	"github.com/ThotPrime/Project/tree/master/Project/pkg/models"
 	//"github.com/ThotPrime/Project/tree/main/Project/pkg/mocks"
 )
 

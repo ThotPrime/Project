@@ -5,10 +5,10 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"github.com/ThotPrime/Project/tree/master/pkg/db"
+	"github.com/ThotPrime/Project/tree/master/Project/pkg/db"
 	//"github.com/Project/go/crud/pkg/handlers"
 	//"github.com/karanpratapsingh/tutorials/tree/master/go/gorm/pkg/db"
-  	"github.com/ThotPrime/Project/tree/main/Project/pkg/handlers"
+  	"github.com/ThotPrime/Project/tree/master/Project/pkg/handlers"
 )
 
 func main() {

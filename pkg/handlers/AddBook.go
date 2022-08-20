@@ -11,7 +11,7 @@ import (
 	//"github.com/tutorials/go/crud/pkg/mocks"
 	//"github.com/ThotPrime/Project/tree/main/Project/pkg/mocks"
 	//"github.com/tutorials/go/crud/pkg/models"
-	"github.com/ThotPrime/Project/tree/main/Project/pkg/models"
+	"github.com/ThotPrime/Project/tree/master/Project/pkg/models"
 )
 
 func (h handler) AddBook(w http.ResponseWriter, r *http.Request) {
