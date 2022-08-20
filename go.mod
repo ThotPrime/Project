@@ -1,4 +1,4 @@
-module github.com/ThotPrime/Project/tree/main/Project
+module github.com/ThotPrime/Project/tree/master/Project
 
 go 1.18
 

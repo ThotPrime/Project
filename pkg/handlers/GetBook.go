@@ -4,10 +4,12 @@ import (
 	"encoding/json"
 	"net/http"
 	"strconv"
+	"fmt"
 
 	"github.com/gorilla/mux"
 	//"github.com/tutorials/go/crud/pkg/mocks"
-	"github.com/ThotPrime/Project/tree/main/Project/pkg/mocks"
+	"github.com/ThotPrime/Project/tree/main/Project/pkg/models"
+	//"github.com/ThotPrime/Project/tree/main/Project/pkg/mocks"
 )
 
 func (h handler) GetBook(w http.ResponseWriter, r *http.Request) {

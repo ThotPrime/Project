@@ -3,9 +3,11 @@ package handlers
 import (
 	"encoding/json"
 	"net/http"
+	"fmt"
 
 	//"github.com/tutorials/go/crud/pkg/mocks"
-	"github.com/ThotPrime/Project/tree/main/Project/pkg/mocks"
+	"github.com/ThotPrime/Project/tree/main/Project/pkg/models"
+	//"github.com/ThotPrime/Project/tree/main/Project/pkg/mocks"
 )
 
 func (h handler) GetAllBooks(w http.ResponseWriter, r *http.Request) {
