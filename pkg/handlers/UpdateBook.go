@@ -14,7 +14,7 @@ import (
 	"github.com/ThotPrime/Project/tree/main/Project/pkg/models"
 )
 
-func UpdateBook(w http.ResponseWriter, r *http.Request) {
+func (h handler)UpdateBook(w http.ResponseWriter, r *http.Request) {
 	// Read dynamic id parameter
 	vars := mux.Vars(r)
 	id, _ := strconv.Atoi(vars["id"])

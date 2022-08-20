@@ -10,7 +10,7 @@ import (
 	"github.com/ThotPrime/Project/tree/main/Project/pkg/mocks"
 )
 
-func GetBook(w http.ResponseWriter, r *http.Request) {
+func (h handler)GetBook(w http.ResponseWriter, r *http.Request) {
 	// Read dynamic id parameter
 	vars := mux.Vars(r)
 	id, _ := strconv.Atoi(vars["id"])
