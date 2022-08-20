@@ -14,7 +14,7 @@ import (
 	"github.com/ThotPrime/Project/tree/main/Project/pkg/models"
 )
 
-func (h handler)UpdateBook(w http.ResponseWriter, r *http.Request) {
+func (h handler) UpdateBook(w http.ResponseWriter, r *http.Request) {
 	// Read dynamic id parameter
 	vars := mux.Vars(r)
 	id, _ := strconv.Atoi(vars["id"])
@@ -30,20 +30,19 @@ func (h handler)UpdateBook(w http.ResponseWriter, r *http.Request) {
 	var updatedBook models.Book
 	json.Unmarshal(body, &updatedBook)
 
-	// Iterate over all the mock Books
-	for index, book := range mocks.Books {
-		if book.Id == id {
-			// Update and send response when book Id matches dynamic Id
-			book.Title = updatedBook.Title
-			book.Author = updatedBook.Author
-			book.Desc = updatedBook.Desc
+	var book models.Book
 
-			mocks.Books[index] = book
-
-			w.Header().Add("Content-Type", "application/json")
-			w.WriteHeader(http.StatusOK)
-			json.NewEncoder(w).Encode("Updated")
-			break
-		}
+	if result := h.DB.First(&book, id); result.Error != nil {
+		fmt.Println(result.Error)
 	}
+
+	book.Title = updatedBook.Title
+	book.Author = updatedBook.Author
+	book.Desc = updatedBook.Desc
+
+	h.DB.Save(&book)
+
+	w.Header().Add("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+	json.NewEncoder(w).Encode("Updated")
 }

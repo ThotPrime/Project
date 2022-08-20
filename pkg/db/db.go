@@ -3,8 +3,9 @@ package db
 import (
     "log"
 
-    "github.com/tutorials/go/crud/pkg/models"
-    "gorm.io/driver/postgres"
+   // "github.com/tutorials/go/crud/pkg/models"
+   "github.com/ThotPrime/Project/tree/main/Project/pkg/models" 
+   "gorm.io/driver/postgres"
     "gorm.io/gorm"
 )
 
