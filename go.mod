@@ -1,4 +1,4 @@
-module hello
+module github.com/ThotPrime/Project/Project
 
 go 1.18
 
