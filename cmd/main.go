@@ -6,10 +6,14 @@ import (
 
 	"github.com/gorilla/mux"
 	//"github.com/Project/go/crud/pkg/handlers"
-  "github.com/ThotPrime/Project/tree/main/Project/pkg/handlers"
+	"github.com/karanpratapsingh/tutorials/tree/master/go/gorm/pkg/db"
+  	"github.com/ThotPrime/Project/tree/main/Project/pkg/handlers"
 )
 
 func main() {
+	DB:=db.Init()
+	h:=handlers.New(DB)
+	router:=mux.NewRouter()
 	router := mux.NewRouter()
 
 	router.HandleFunc("/books", handlers.GetAllBooks).Methods(http.MethodGet)
