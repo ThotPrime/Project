@@ -1,19 +1,19 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net/http"
-	"fmt"
 
-	"github.com/gorilla/mux"
 	"github.com/ThotPrime/Project/tree/master/Project/pkg/db"
+	"github.com/gorilla/mux"
+
 	//"github.com/Project/go/crud/pkg/handlers"
 	//"github.com/karanpratapsingh/tutorials/tree/master/go/gorm/pkg/db"
-  	"github.com/ThotPrime/Project/tree/master/Project/pkg/handlers"
+	"github.com/ThotPrime/Project/tree/master/Project/pkg/handlers"
 	"go.mongodb.org/mongo-driver/mongo"
 	//"go.mongodb.org/mongo-driver/mongo/options"
 )
-
 
 var DBM *mongo.Collection
 
@@ -25,7 +25,6 @@ func main() {
 	DBM := db.initMongo()
 	hM := handlers.New(DBM)
 	r := mux.NewRouter()
-	
 
 	router.HandleFunc("/books", h.GetAllBooks).Methods(http.MethodGet)
 	router.HandleFunc("/books/{id}", h.GetBook).Methods(http.MethodGet)
@@ -35,7 +34,6 @@ func main() {
 	router.HandleFunc("/api/movies", hM.GetMyAllMovies).Methods("GET")
 	router.HandleFunc("/api/movie", hM.CreateMovie).Methods("POST")
 
-	
 	fmt.Println("Server is getting started...")
 	log.Fatal(http.ListenAndServe(":4001", r))
 	fmt.Println("Listening at port 4001 ...")
