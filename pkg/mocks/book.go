@@ -1,7 +1,7 @@
 package mocks
 
 //import "github.com/tutorials/go/crud/pkg/models"
-import "github.com/ThotPrime/Project/tree/main/Project/pkg/models"
+import "github.com/ThotPrime/Project/tree/master/Project/pkg/models"
 
 var Books = []models.Book{
 	{
